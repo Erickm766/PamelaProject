@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>&#9733;</span>PhotoSite</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="comprar.html" class="btn-nav">Comprar</a>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Web para comprar<br>fotografías en<br>todo el mundo</h1>
+      <a href="comprar.html" class="btn-hero">Comprar AHORA</a>
+    </div>
+    <div class="hero-img">
+      <img src="img/img1.jpeg" alt="Cámara fotográfica">
+    </div>
+  </section>
+
+  <!-- ── TIPOS ── -->
+  <section class="tipos">
+    <div class="tipos-left">
+      <h2>Muchos tipos de Fotografía con resultados <strong>PROFESIONALES</strong></h2>
+      <p>Captura la esencia de cada rincón del mundo a través de miradas únicas, con calidad profesional que transforma momentos ordinarios en recuerdos inolvidables para ti.</p>
+      <div class="icons">
+        <div>
+          <h4>Paisajes:</h4>
+          <p>Desde las montañas más majestuosas hasta las playas más serenas, cada imagen te transporta a un rincón especial del planeta.</p>
+        </div>
+        <div>
+          <h4>Retratos:</h4>
+          <p>Cada rostro es un universo; aquí capturamos emociones auténticas y momentos que trascienden.</p>
+        </div>
+        <div>
+          <h4>Fotografía Urbana:</h4>
+          <p>Explora la energía de las calles, donde cada esquina es un escenario diferente de vida.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tipos-img">
+      <img src="img/img2.jpeg" alt="Fotografía con smartphone">
+    </div>
+  </section>
+
+  <!-- ── EXPLORAR ── -->
+  <section class="explorar">
+    <div class="grid">
+      <img src="img/img14.jpeg" alt="Foto 1">
+      <img src="img/img4.jpeg"  alt="Foto 2">
+      <img src="img/img5.jpeg"  alt="Foto 3">
+      <img src="img/img6.jpeg"  alt="Foto 4">
+    </div>
+    <div class="texto">
+      <h1>Descubre el mundo a través de la Fotografía</h1>
+      <p>Explora una colección única de imágenes capturadas por fotógrafos de todo el mundo. Encuentra estilos, emociones y momentos auténticos que transforman lo cotidiano en arte visual. Organiza, descubre y compra fotografías de forma fácil y rápida.</p>
+      <p>Explora imágenes únicas de todo el mundo:</p>
+      <div class="lista">
+        ✔ Galerías de fotos profesionales.<br>
+        ✔ Diferentes estilos y categorías.<br>
+        ✔ Fotografía de todo el mundo.<br>
+        ✔ Compra rápida y segura.<br>
+        ✔ Imágenes en alta calidad.
+      </div>
+      <a href="galeria.html" class="btn-explorar">EXPLORAR</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo"><span>&#9733;</span>PhotoSite</div>
+    <div class="footer-social">
+      <a href="https://x.com"><img src="img/X.png" alt="X"></a>
+      <a href="https://facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
+    </div>
+    <p class="footer-copy">© 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav-links a');
+    const current = location.pathname.split('/').pop() || 'index.html';
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) link.classList.add('active');
+    });
+  </script>
+
+</body>
+</html>

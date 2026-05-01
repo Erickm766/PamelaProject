@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSite – Nosotros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>&#9733;</span>PhotoSite</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="comprar.html" class="btn-nav">Comprar</a>
+  </header>
+
+  <!-- ── HERO NOSOTROS ── -->
+  <section class="hero-nosotros">
+    <div class="hero-nosotros-text">
+      <h1>Sobre Nosotros</h1>
+      <p class="tagline">"Capturando el mundo, un instante a la vez"</p>
+      <p>Somos un proyecto dedicado a capturar momentos únicos a través de la fotografía. Creemos en el poder de las imágenes para transmitir emociones, contar historias y conectar personas alrededor del mundo. Nuestro objetivo es ofrecer fotografías profesionales, auténticas y accesibles para todos.</p>
+      <div class="cards-nosotros">
+        <div class="card-n">
+          <h4>Nuestro Enfoque:</h4>
+          <p>Trabajamos con un enfoque artístico y profesional, cuidando composición, luz y color para lograr fotografías que realmente destacan.</p>
+        </div>
+        <div class="card-n">
+          <h4>Nuestra Promesa:</h4>
+          <p>Te garantizamos calidad, autenticidad y un proceso transparente. Cada foto está pensada para inspirar y transmitir una historia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-nosotros-img">
+      <img src="img/img7.jpeg" alt="Fotografía móvil con galería">
+    </div>
+  </section>
+
+  <!-- ── VALORES ── -->
+  <section class="valores">
+    <div class="valores-grid">
+      <div class="valor-item">
+        <div class="valor-titulo">
+          <img src="img/camaraFotografica.png" alt="Cámara">
+          <h3>Calidad Profesional</h3>
+        </div>
+        <img class="valor-foto" src="img/img11.jpeg" alt="Calidad profesional">
+        <p>Cada foto es seleccionada con cuidado.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-titulo">
+          <img src="img/globo.png" alt="Globo">
+          <h3>Fotógrafos Globales</h3>
+        </div>
+        <img class="valor-foto" src="img/img9.jpeg" alt="Fotógrafos globales">
+        <p>Talento internacional en cada colección.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-titulo">
+          <img src="img/estrella.png" alt="Estrella">
+          <h3>Inspiración Visual</h3>
+        </div>
+        <img class="valor-foto" src="img/img10.jpeg" alt="Inspiración visual">
+        <p>Imágenes que hablan por sí solas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOTO GRANDE + FRASE ── -->
+  <section class="foto-frase">
+    <img src="img/img8.jpeg" alt="Galería de fotografías">
+    <p class="frase">"Cada fotografía guarda una historia que merece ser contada."</p>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo"><span>&#9733;</span>PhotoSite</div>
+    <div class="footer-social">
+      <a href="https://x.com"><img src="img/X.png" alt="X"></a>
+      <a href="https://facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
+    </div>
+    <p class="footer-copy">© 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav-links a');
+    const current = location.pathname.split('/').pop() || 'index.html';
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) link.classList.add('active');
+    });
+  </script>
+
+</body>
+</html>
