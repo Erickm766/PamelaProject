@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSite – Contacto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+ 
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>&#9733;</span>PhotoSite</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="comprar.html" class="btn-nav">Comprar</a>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="contacto-hero">
+    <img class="bg" src="img/img1.jpeg" alt="Fondo contacto">
+    <div class="contacto-hero-text">
+      <h1>¿Tienes alguna pregunta?</h1>
+      <p>Estamos aquí para ayudarte. Respondemos muy pronto.</p>
+    </div>
+  </section>
+
+  <!-- ── FORMULARIO ── -->
+  <section class="contacto-form-section">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="">
+      </div>
+    </div>
+
+    <div class="form-group form-mensaje">
+      <label for="mensaje">Mensaje*</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+    </div>
+
+    <div class="form-footer">
+      <label class="checkbox-label">
+        <input type="checkbox" required>
+        Acepto la <a href="#">Política de privacidad</a>
+      </label>
+      <button class="btn-enviar" type="submit">Enviar</button>
+    </div>
+  </section>
+
+  <!-- ── INFO PRIVACIDAD ── -->
+  <div class="contacto-info">
+    <p class="contacto-email">info@photosite.com</p>
+    <div class="contacto-privacidad">
+      <p>Tus datos están seguros con nosotros. Solo utilizaremos tu correo electrónico para responder a tu consulta y tu nombre para dirigirnos a ti de manera adecuada.</p>
+      <p>La información que envíes mediante este formulario será utilizada únicamente para darte respuesta. No será guardada permanentemente, no se incluirá en listas de correo, ni se utilizará para enviarte publicidad. Tampoco compartiremos, venderemos ni cederemos tus datos a terceros bajo ninguna circunstancia.</p>
+      <p>Puedes solicitar la consulta, corrección o eliminación de tus datos personales en cualquier momento escribiéndonos a: soporte@photosite.com</p>
+      <p>El responsable del tratamiento de los datos es Pamela Céspedes, creadora de esta página de web.<br>
+      Si deseas más detalles, puedes consultar nuestra <a href="#">Política de privacidad</a>.</p>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo"><span>&#9733;</span>PhotoSite</div>
+    <div class="footer-social">
+      <a href="https://x.com"><img src="img/X.png" alt="X"></a>
+      <a href="https://facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
+    </div>
+    <p class="footer-copy">© 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav-links a');
+    const current = location.pathname.split('/').pop() || 'index.html';
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) link.classList.add('active');
+    });
+  </script>
+
+</body>
+</html>

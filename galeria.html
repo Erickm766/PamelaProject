@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSite – Galería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>&#9733;</span>PhotoSite</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="comprar.html" class="btn-nav">Comprar</a>
+  </header>
+
+  <!-- ── HERO GALERÍA ── -->
+  <section class="galeria-hero">
+    <h1>Galería</h1>
+    <p>Explora nuestra colección de fotografías profesionales<br>
+    Imágenes únicas capturadas en diferentes estilos y lugares del mundo.</p>
+  </section>
+
+  <!-- ── FILTROS ── -->
+  <nav class="filtros">
+    <button class="filtro-btn active">Todos</button>
+    <span class="filtro-sep">•</span>
+    <button class="filtro-btn">Paisajes</button>
+    <span class="filtro-sep">•</span>
+    <button class="filtro-btn">Retratos</button>
+    <span class="filtro-sep">•</span>
+    <button class="filtro-btn">Urbano</button>
+    <span class="filtro-sep">•</span>
+    <button class="filtro-btn">Naturaleza</button>
+    <span class="filtro-sep">•</span>
+    <button class="filtro-btn">Viajes</button>
+    <span class="filtro-sep">•</span>
+    <button class="filtro-btn">Arte</button>
+  </nav>
+
+  <!-- ── GRID ── -->
+  <section class="galeria-grid-section">
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="img/img1.jpeg" alt="Paisajes">
+        <span class="cat-label">Paisajes</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img2.jpeg" alt="Retratos">
+        <span class="cat-label">Retratos</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img3.jpeg" alt="Viajes">
+        <span class="cat-label">Viajes</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img4.jpeg" alt="Urbano">
+        <span class="cat-label">Urbano</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img5.jpeg" alt="Naturaleza">
+        <span class="cat-label">Naturaleza</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img6.jpeg" alt="Arte">
+        <span class="cat-label">Arte</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img7.jpeg" alt="Animal">
+        <span class="cat-label">Animal</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img8.jpeg" alt="Arquitectura">
+        <span class="cat-label">Arquitectura</span>
+      </div>
+      <div class="galeria-item">
+        <img src="img/img9.jpeg" alt="Atardeceres">
+        <span class="cat-label">Atardeceres</span>
+      </div>
+    </div>
+
+    <!-- CITA -->
+    <div class="galeria-cita">
+      "Cada fotografía forma parte de una colección seleccionada cuidadosamente.<br>
+      Explora distintos estilos, colores y emociones en una experiencia visual inspiradora."
+    </div>
+  </section>
+
+  <!-- ── DESTACADOS ── -->
+  <section class="destacados">
+    <h2>&#9733; Destacados de la Semana &#9733;</h2>
+
+    <div class="destacados-grid">
+      <div class="destacado-item">
+        <img src="img/img11.jpeg" alt="Noches de Ciudad">
+        <p class="dest-titulo">"Noches de Ciudad"</p>
+        <p class="dest-sub">Arquitectura/Paisaje.</p>
+      </div>
+      <div class="destacado-item">
+        <img src="img/img12.jpeg" alt="Rostros Reales">
+        <p class="dest-titulo">"Rostros Reales"</p>
+        <p class="dest-sub">Retrato.</p>
+      </div>
+    </div>
+
+    <div class="galeria-cta">
+      <p>¿Quieres comprar alguna fotografía?</p>
+      <p>Visita la sección <a href="comprar.html" class="btn-comprar-cta">Comprar</a> para más detalles...</p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo"><span>&#9733;</span>PhotoSite</div>
+    <div class="footer-social">
+      <a href="https://x.com"><img src="img/X.png" alt="X"></a>
+      <a href="https://facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
+    </div>
+    <p class="footer-copy">© 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Nav activo
+    const links = document.querySelectorAll('.nav-links a');
+    const current = location.pathname.split('/').pop() || 'index.html';
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) link.classList.add('active');
+    });
+
+    // Filtros
+    const btns = document.querySelectorAll('.filtro-btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

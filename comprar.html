@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoSite – Comprar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar">
+    <a href="index.html" class="logo"><span>&#9733;</span>PhotoSite</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="comprar.html" class="btn-nav">Comprar</a>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="comprar-hero">
+    <img class="bg" src="img/img1.jpeg" alt="Fondo comprar">
+    <div class="comprar-hero-text">
+      <h1>Planes y Precios de Fotografía</h1>
+      <p>"Explora, elige y descarga en segundos desde la comodidad de tu casa."</p>
+    </div>
+  </section>
+
+  <!-- ── CÓMO COMPRAR ── -->
+  <section class="como-comprar">
+    <h2>¿Cómo Comprar?</h2>
+    <div class="pasos">
+      <div class="paso">
+        <h4>Explora</h4>
+        <p>Busca la foto perfecta entre miles de lugares.</p>
+      </div>
+      <div class="paso">
+        <h4>Compra</h4>
+        <p>Añade la foto a tu carrito de compras.</p>
+      </div>
+      <div class="paso">
+        <h4>Paga Seguro</h4>
+        <p>Completa tu pago de forma rápida y segura.</p>
+      </div>
+      <div class="paso">
+        <h4>Descarga</h4>
+        <p>Descarga tu foto en la mejor resolución al instante.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLANES Y PRECIOS ── -->
+  <section class="planes-section">
+    <h2>Planes y Precios</h2>
+    <p>Elije el Plan que mejor se adapte a ti.</p>
+
+    <div class="planes-grid">
+
+      <div class="plan-card">
+        <h3>Individual</h3>
+        <p class="plan-sub">Perfecto para proyectos personales.</p>
+        <div class="precio">10$</div>
+        <ul class="plan-features">
+          <li>1 foto en alta resolución</li>
+          <li>Descarga inmediata</li>
+        </ul>
+        <a  class="btn-plan">Comprar</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Paquete 10</h3>
+        <p class="plan-sub">Ideal para quienes buscan aún más.</p>
+        <div class="precio">28$</div>
+        <ul class="plan-features">
+          <li>10 fotos en alta resolución</li>
+          <li>Descarga inmediata</li>
+          <li>Uso comercial</li>
+        </ul>
+        <a  class="btn-plan">Comprar</a>
+      </div>
+
+      <div class="plan-card">
+        <h3>Total</h3>
+        <p class="plan-sub">Para creadores y profesionales.</p>
+        <div class="precio">45$</div>
+        <ul class="plan-features">
+          <li>Descargas ilimitadas</li>
+          <li>Colecciones mensuales</li>
+          <li>Uso comercial</li>
+        </ul>
+        <a class="btn-plan">Comprar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo"><span>&#9733;</span>PhotoSite</div>
+    <div class="footer-social">
+      <a href="https://x.com"><img src="img/X.png" alt="X"></a>
+      <a href="https://facebook.com"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="img/instagram.png" alt="Instagram"></a>
+    </div>
+    <p class="footer-copy">© 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll('.nav-links a');
+    const current = location.pathname.split('/').pop() || 'index.html';
+    links.forEach(link => {
+      if (link.getAttribute('href') === current) link.classList.add('active');
+    });
+  </script>
+
+</body>
+</html>
